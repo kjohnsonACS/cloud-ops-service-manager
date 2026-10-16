@@ -1,5 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { InstanceRepository } from './services/instance.repository';
+import { MockInstanceRepository } from './data/mock-instance.repository';
 
 export const appConfig: ApplicationConfig = {
   providers: [
