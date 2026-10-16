@@ -1,11 +1,11 @@
 /**
- * DEMO DATA ONLY — DELETE THIS FILE WHEN CONNECTING TO AWS.
+ * MOCK DATA ONLY — DELETE THIS FILE WHEN CONNECTING TO AWS.
  * All identifiers, instance names, users, schedules, and activity are fictional.
  * These permissions are illustrative UI data, NOT security authorization.
  */
 import { ActivityEvent, Ec2Instance } from '../models/instance.model';
 
-export const DEMO_INSTANCES: Ec2Instance[] = [
+export const MOCK_INSTANCES: Ec2Instance[] = [
   {
     key: '111122223333/us-east-1/i-0a1bcde1234567890',
     instanceId: 'i-0a1bcde1234567890', name: 'research-dev-api',
@@ -104,9 +104,9 @@ export const DEMO_INSTANCES: Ec2Instance[] = [
   },
 ];
 
-export const DEMO_ACTIVITY: ActivityEvent[] = [
-  {id: 'demo-101', instanceKey: DEMO_INSTANCES[4].key, instanceName: 'qa-integration-runner', accountName: 'Research · Stage', actor: 'Schedule', action: 'start', occurredAt: '2026-10-15T07:02:00-04:00', result: 'Completed'},
-  {id: 'demo-102', instanceKey: DEMO_INSTANCES[6].key, instanceName: 'design-system-preview', accountName: 'Research · Dev', actor: 'Alex Morgan', action: 'start', occurredAt: '2026-10-15T09:05:00-04:00', result: 'Completed'},
-  {id: 'demo-103', instanceKey: DEMO_INSTANCES[1].key, instanceName: 'research-staging', accountName: 'Research · Stage', actor: 'Taylor Kim', action: 'stop', occurredAt: '2026-10-14T19:15:00-04:00', result: 'Completed'},
-  {id: 'demo-104', instanceKey: DEMO_INSTANCES[0].key, instanceName: 'research-dev-api', accountName: 'Research · Dev', actor: 'Schedule', action: 'reboot', occurredAt: '2026-10-14T10:15:00-04:00', result: 'Completed'},
+export const MOCK_ACTIVITY: ActivityEvent[] = [
+  {id: 'mock-101', instanceKey: MOCK_INSTANCES[4].key, instanceName: 'qa-integration-runner', accountName: 'Research · Stage', actor: 'Schedule', action: 'start', occurredAt: '2026-10-15T07:02:00-04:00', result: 'Completed'},
+  {id: 'mock-102', instanceKey: MOCK_INSTANCES[6].key, instanceName: 'design-system-preview', accountName: 'Research · Dev', actor: 'Alex Morgan', action: 'start', occurredAt: '2026-10-15T09:05:00-04:00', result: 'Completed'},
+  {id: 'mock-103', instanceKey: MOCK_INSTANCES[1].key, instanceName: 'research-staging', accountName: 'Research · Stage', actor: 'Taylor Kim', action: 'stop', occurredAt: '2026-10-14T19:15:00-04:00', result: 'Completed'},
+  {id: 'mock-104', instanceKey: MOCK_INSTANCES[0].key, instanceName: 'research-dev-api', accountName: 'Research · Dev', actor: 'Schedule', action: 'reboot', occurredAt: '2026-10-14T10:15:00-04:00', result: 'Completed'},
 ];

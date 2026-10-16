@@ -1,19 +1,19 @@
 /**
- * DEMO ONLY — DELETE this class and demo.instances.ts when wiring the AWS API.
+ * DEMO ONLY — DELETE this class and mock.instances.ts when wiring the AWS API.
  * Simulates a network request and a state transition in browser memory.
  * This is NOT authentication, IAM authorization, or EC2 command execution.
  */
 import { Injectable } from '@angular/core';
 import { DashboardData, Ec2Instance, InstanceAction } from '../models/instance.model';
 import { InstanceRepository } from '../services/instance.repository';
-import { DEMO_ACTIVITY, DEMO_INSTANCES } from './demo.instances';
+import { MOCK_ACTIVITY, MOCK_INSTANCES } from './mock.instances';
 
 const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
 @Injectable()
-export class DemoInstanceRepository extends InstanceRepository {
-  private readonly instances: Ec2Instance[] = structuredClone(DEMO_INSTANCES);
-  private readonly activity = structuredClone(DEMO_ACTIVITY);
+export class MockInstanceRepository extends InstanceRepository {
+  private readonly instances: Ec2Instance[] = structuredClone(MOCK_INSTANCES);
+  private readonly activity = structuredClone(MOCK_ACTIVITY);
 
   override async getDashboardData(): Promise<DashboardData> {
     await delay(160);
