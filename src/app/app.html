@@ -11,7 +11,7 @@
           <path d="M17 10h5M17 22h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
-      <div><span class="brand-name">NORTHSTAR</span><span class="brand-sub">EC2 OPERATIONS</span></div>
+      <div><span class="brand-sub">EC2 OPERATIONS</span></div>
     </div>
     <div class="sidebar-caption">WORKSPACE</div>
     <nav class="primary-nav" aria-label="Primary">
@@ -45,12 +45,6 @@
     </nav>
 
     <div class="sidebar-bottom">
-      <div class="side-help">
-        <div class="side-help-icon" aria-hidden="true">✦</div>
-        <strong>Built for clarity.</strong>
-        <p>Everything you need to manage permitted compute resources.</p>
-        <span class="side-help-note">Demonstration workspace</span>
-      </div>
       <div class="sidebar-profile">
         <div class="avatar" aria-hidden="true">DU</div>
         <div><strong>Demo user</strong><small>Illustrative access</small></div><span class="online-dot"
@@ -85,17 +79,6 @@
     </header>
 
     <main id="main-content" class="main-content" tabindex="-1">
-      <div class="demo-banner" role="note">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="9" />
-          <path d="M12 10.5v5M12 7.5h.01" />
-        </svg>
-        <div><strong>Interactive demo environment</strong><span>All instances, permissions, schedules, and operations
-            are simulated. No AWS account is connected.</span></div>
-        <span class="demo-banner-pill">DEMO MODE</span>
-      </div>
-      <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">{{ announcement() }}</p>
-
       <div class="page-heading">
         <div>
           <div class="eyebrow">COMPUTE MANAGEMENT <span class="eyebrow-line"></span> EC2</div>
@@ -318,8 +301,7 @@
           }
         </div>
         }
-        <div class="panel-footer"><span>Showing {{ filteredInstances().length }} resources · Mock entitlements
-            only</span><span>State changes are simulated locally</span></div>
+        <div class="panel-footer"><span>Showing {{ filteredInstances().length }} resources</span></div>
       </section>
       }
 
@@ -328,7 +310,6 @@
         <div class="activity-heading">
           <div>
             <h2 id="activity-title">Recent activity</h2>
-            <p>Illustrative action history. New demo operations appear here.</p>
           </div>@if (view() === 'overview') { <button type="button" class="text-action"
             (click)="setView('activity')">View all activity <span aria-hidden="true">→</span></button> }
         </div>
@@ -349,8 +330,6 @@
       </section>
       }
       }
-      <footer class="site-footer"><span>Northstar · EC2 Operations Portal concept</span><span>Illustrative data only ·
-          No real authentication or IAM enforcement</span></footer>
     </main>
   </div>
 </div>
